@@ -1,0 +1,15 @@
+<div class="widget-container">
+    <dx-list [items]="posts" [(selectedItems)]="currentPosts" selectionMode="single">
+        <div *dxTemplate="let post of 'item'">
+            <dx-box direction="row" width="100%">
+                <dxi-item [ratio]="0" [baseSize]="50">
+                    <h4>{{post.id}}</h4>
+                </dxi-item>
+                <dxi-item [ratio]="1">
+                    <h4>{{post.title}}</h4>
+                    <p>{{post.body}}</p>
+                </dxi-item>
+            </dx-box>
+        </div>
+    </dx-list>
+</div>
